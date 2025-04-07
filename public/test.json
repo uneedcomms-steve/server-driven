@@ -1,0 +1,229 @@
+{
+  "version": "1.0",
+  "screen": {
+    "id": "home_screen",
+    "title": "홈 화면",
+    "backgroundColor": "#f5f5f5",
+    "components": [
+      {
+        "type": "header",
+        "id": "main_header",
+        "title": "서버 드리븐 UI 예제",
+        "backgroundColor": "#4A90E2",
+        "textColor": "#FFFFFF",
+        "height": 60
+      },
+      {
+        "type": "carousel",
+        "id": "featured_carousel",
+        "items": [
+          {
+            "id": "banner_1",
+            "imageUrl": "https://via.placeholder.com/400x200?text=배너1",
+            "action": {
+              "type": "navigate",
+              "destination": "detail_screen",
+              "params": {
+                "itemId": "item_1"
+              }
+            }
+          },
+          {
+            "id": "banner_2",
+            "imageUrl": "https://via.placeholder.com/400x200?text=배너2",
+            "action": {
+              "type": "navigate",
+              "destination": "detail_screen",
+              "params": {
+                "itemId": "item_2"
+              }
+            }
+          },
+          {
+            "id": "banner_3",
+            "imageUrl": "https://via.placeholder.com/400x200?text=배너3",
+            "action": {
+              "type": "navigate",
+              "destination": "detail_screen",
+              "params": {
+                "itemId": "item_3"
+              }
+            }
+          }
+        ],
+        "autoplay": true,
+        "autoplayInterval": 3000
+      },
+      {
+        "type": "section",
+        "id": "category_section",
+        "title": "카테고리",
+        "items": [
+          {
+            "id": "category_1",
+            "title": "전자기기",
+            "iconUrl": "https://via.placeholder.com/50?text=전자",
+            "action": {
+              "type": "navigate",
+              "destination": "category_screen",
+              "params": {
+                "categoryId": "electronics"
+              }
+            }
+          },
+          {
+            "id": "category_2",
+            "title": "의류",
+            "iconUrl": "https://via.placeholder.com/50?text=의류",
+            "action": {
+              "type": "navigate",
+              "destination": "category_screen",
+              "params": {
+                "categoryId": "fashion"
+              }
+            }
+          },
+          {
+            "id": "category_3",
+            "title": "식품",
+            "iconUrl": "https://via.placeholder.com/50?text=식품",
+            "action": {
+              "type": "navigate",
+              "destination": "category_screen",
+              "params": {
+                "categoryId": "food"
+              }
+            }
+          },
+          {
+            "id": "category_4",
+            "title": "가구",
+            "iconUrl": "https://via.placeholder.com/50?text=가구",
+            "action": {
+              "type": "navigate",
+              "destination": "category_screen",
+              "params": {
+                "categoryId": "furniture"
+              }
+            }
+          }
+        ],
+        "layout": "grid",
+        "columns": 4
+      },
+      {
+        "type": "product_list",
+        "id": "featured_products",
+        "title": "추천 상품",
+        "items": [
+          {
+            "id": "product_1",
+            "title": "스마트폰",
+            "price": "899,000원",
+            "discountPrice": "799,000원",
+            "imageUrl": "https://via.placeholder.com/150?text=Phone",
+            "badge": "인기",
+            "action": {
+              "type": "navigate",
+              "destination": "product_detail",
+              "params": {
+                "productId": "p1001"
+              }
+            }
+          },
+          {
+            "id": "product_2",
+            "title": "노트북",
+            "price": "1,599,000원",
+            "discountPrice": "1,399,000원",
+            "imageUrl": "https://via.placeholder.com/150?text=Laptop",
+            "badge": "할인",
+            "action": {
+              "type": "navigate",
+              "destination": "product_detail",
+              "params": {
+                "productId": "p1002"
+              }
+            }
+          },
+          {
+            "id": "product_3",
+            "title": "무선이어폰",
+            "price": "299,000원",
+            "discountPrice": "249,000원",
+            "imageUrl": "https://via.placeholder.com/150?text=Earbuds",
+            "action": {
+              "type": "navigate",
+              "destination": "product_detail",
+              "params": {
+                "productId": "p1003"
+              }
+            }
+          }
+        ],
+        "layout": "horizontal",
+        "showPrice": true,
+        "showDiscountPrice": true
+      },
+      {
+        "type": "button",
+        "id": "promo_button",
+        "title": "지금 가입하고 10% 할인받기",
+        "style": "primary",
+        "backgroundColor": "#FF5722",
+        "textColor": "#FFFFFF",
+        "cornerRadius": 8,
+        "action": {
+          "type": "navigate",
+          "destination": "signup_screen"
+        }
+      },
+      {
+        "type": "footer",
+        "id": "main_footer",
+        "items": [
+          {
+            "id": "menu_home",
+            "title": "홈",
+            "iconUrl": "https://via.placeholder.com/24?text=H",
+            "isSelected": true,
+            "action": {
+              "type": "navigate",
+              "destination": "home_screen"
+            }
+          },
+          {
+            "id": "menu_category",
+            "title": "카테고리",
+            "iconUrl": "https://via.placeholder.com/24?text=C",
+            "action": {
+              "type": "navigate",
+              "destination": "category_list_screen"
+            }
+          },
+          {
+            "id": "menu_cart",
+            "title": "장바구니",
+            "iconUrl": "https://via.placeholder.com/24?text=B",
+            "badgeCount": 2,
+            "action": {
+              "type": "navigate",
+              "destination": "cart_screen"
+            }
+          },
+          {
+            "id": "menu_mypage",
+            "title": "마이페이지",
+            "iconUrl": "https://via.placeholder.com/24?text=M",
+            "action": {
+              "type": "navigate",
+              "destination": "mypage_screen"
+            }
+          }
+        ],
+        "backgroundColor": "#FFFFFF",
+        "layout": "tabs"
+      }
+    ]
+  }
+}
